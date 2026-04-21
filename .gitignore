@@ -1,0 +1,17 @@
+# Python 가상환경
+venv/
+.pytest_cache/
+__pycache__/
+
+# Node.js 모듈 (이건 용량이 너무 커서 올리면 안 돼요)
+node_modules/
+package-lock.json
+
+# 로그 및 스크린샷 (아까 생성한 XML 포함)
+*.log
+*.xml
+*.png
+
+# Mac/Windows 설정 파일
+.DS_Store
+Thumbs.db
