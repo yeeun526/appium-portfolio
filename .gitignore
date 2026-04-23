@@ -3,7 +3,7 @@ venv/
 .pytest_cache/
 __pycache__/
 
-# Node.js 모듈 (이건 용량이 너무 커서 올리면 안 돼요)
+# Node.js 모듈 (이건 용량이 너무 커서 올리면 안 됨)
 node_modules/
 package-lock.json
 

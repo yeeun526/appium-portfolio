@@ -38,7 +38,6 @@ class AppLoginPage:
         """로그인 버튼 클릭 (테스트 코드 호환용)"""
         self.get_login_button().click()
 
-    # --- 기존 로직 유지 ---
     def get_error_message(self):
         for _ in range(10):
             source = self.driver.page_source
@@ -61,14 +60,11 @@ class AppLoginPage:
     def logout(self):
         """아까 찾은 content-desc='로그아웃' 버튼 클릭"""
         try:
-            # 🎯 945, 104 좌표에 있던 그 버튼입니다.
             self.driver.find_element(AppiumBy.ACCESSIBILITY_ID, "로그아웃").click()
             print("✅ 이모티콘 로그아웃 버튼 클릭 성공")
             return True
         except Exception as e:
             print(f"❌ 로그아웃 버튼 클릭 실패: {e}")
-            # 백업: 좌표 클릭 (bounds="[945,104][1080,239]")
-            # self.driver.tap([(1000, 150)]) 
             return False
         
     def ensure_login_page(self):

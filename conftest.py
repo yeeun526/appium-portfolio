@@ -16,7 +16,7 @@ def ensure_device_connected():
     except:
         pass
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope="module")
 def driver():
     ensure_device_connected()
     
@@ -30,8 +30,6 @@ def driver():
     options.set_capability("appium:noReset", True)
     options.set_capability("appium:newCommandTimeout", 3600)
     options.set_capability("appium:uiautomator2ServerLaunchTimeout", 90000)
-    
-    # 앱 정보
     options.set_capability("appium:appPackage", "com.example.jesus_worship_calendar_app")
     options.set_capability("appium:appActivity", ".MainActivity")
 
