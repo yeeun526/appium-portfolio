@@ -2,7 +2,6 @@ import pytest
 import subprocess
 import time
 from appium import webdriver
-# 🎯 바로 이 줄이 빠져서 에러가 난 겁니다!
 from appium.options.android import UiAutomator2Options 
 
 def ensure_device_connected():

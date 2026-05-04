@@ -1,0 +1,8 @@
+﻿id,pw,expected_result,error_message,비고
+test@naver.com,123456,success,,정상 로그인
+wrong@naver.com,wrongpw,fail,id 또는 비밀번호가 일치하지 않습니다.,"id, pw 불일치"
+,123456,fail,아이디를 입력해주세요.,id 미입력
+test@naver.com,,fail,비밀번호를 입력해주세요.,pw 미입력
+test ,123456,fail,유효하지 않는 아이디 형식입니다.,유효하지 않은 id 형식
+test@naver.com,          ,fail,유효하지 않는 비밀번호 형식입니다.,유효하지 않은 비밀번호 형식
+test@naver.com,123,fail,비밀번호를 6자리 이상 입력해주세요.,비밀번호 6자리 이상
